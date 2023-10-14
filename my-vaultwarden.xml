@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vaultwarden</Name>
+  <Repository>vaultwarden/server</Repository>
+  <Registry>https://hub.docker.com/r/vaultwarden/server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/88086-support-vaultwarden-formerly-bitwarden_rs/</Support>
+  <Project>https://github.com/dani-garcia/vaultwarden/</Project>
+  <Overview>Vaultwarden (formerly bitwarden_rs) is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
+    &#xD;
+    Basically full implementation of Bitwarden API is provided including: &#xD;
+    &#xD;
+    -Basic single user functionality&#xD;
+    &#xD;
+    -Organizations support&#xD;
+    &#xD;
+    -Attachments&#xD;
+    &#xD;
+    -Vault API support&#xD;
+    &#xD;
+    -Serving the static files for Vault interface&#xD;
+    #xD;&#xD;
+    -Website icons API&#xD;
+    &#xD;
+    -Authenticator and U2F support&#xD;
+    &#xD;
+    -YubiKey OTP&#xD;
+    &#xD;
+    For more configuration see the wiki https://github.com/dani-garcia/vaultwarden/wiki</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/vaultwarden.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1697194680</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI HTTP Port" Target="80" Default="4743" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">4743</Config>
+  <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Mode="" Description="&#x662F;&#x5426;&#x542F;&#x7528;&#x6CE8;&#x518C;" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true|false" Mode="" Description="&#x662F;&#x5426;&#x5141;&#x8BB8;&#x9080;&#x8BF7;" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="true|false" Mode="" Description="&#x542F;&#x7528; websocket" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="" Mode="" Description=" &#x7BA1;&#x7406;&#x5458;&#x5BC6;&#x7801;" Type="Variable" Display="always" Required="true" Mask="true">123456</Config>
+  <Config Name="&#x65F6;&#x533A;" Target="TZ" Default="Asia/Shanghai" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/vaultwarden" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/vaultwarden</Config>
+</Container>
